@@ -1,5 +1,6 @@
 import loginAxios from '../apiLogin';
 import process from 'process';
+import { useMutation } from 'react-query';
 
 interface ILoginData {
   password: string;
@@ -19,3 +20,16 @@ const loginQuery = async (data: ILoginData) => {
   });
   return response.data;
 };
+
+export function useLogin() {
+  const mutation = useMutation(loginQuery, {
+    onSuccess: (response) => {
+      localStorage.setItem('token', response.access_token);
+    },
+    onError: (error) => {
+      console.error(error);
+    },
+  });
+
+  return mutation;
+}

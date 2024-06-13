@@ -15,8 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "auth/Module": ["apps/auth/src/remote-entry.ts"],
       "dashboard/Module": ["apps/dashboard/src/remote-entry.ts"],
-      "invoice/Module": ["apps/invoice/src/remote-entry.ts"]
+      "invoice/Module": ["apps/invoice/src/remote-entry.ts"],
+      "auth/AuthProvider": ["apps/auth/src/context/AuthContext/index.tsx"],
+      "auth/UseAuth": ["apps/auth/src/context/AuthContext/useAuth.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

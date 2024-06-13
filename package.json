@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve host --open --devRemotes=\"dashboard,invoice\"",
+    "start": "nx serve host --open --devRemotes=\"dashboard,invoice,auth\"",
     "start:host": "nx serve host --open",
     "start:dashboard": "nx serve dashboard --open",
     "start:invoice": "nx serve invoice --open"

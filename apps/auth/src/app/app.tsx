@@ -7,7 +7,7 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      <h1>Invoice</h1>
+      <h1>Auth</h1>
     </StyledApp>
   );
 }
